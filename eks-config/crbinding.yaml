@@ -1,0 +1,15 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  creationTimestamp: "2023-04-27T01:44:54Z"
+  name: azure-devops-role-binding-svc
+  resourceVersion: "214010"
+  uid: 247e1927-d067-414a-a4fa-3295878de863
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: create-deployments
+subjects:
+- kind: ServiceAccount
+  name: cicd
+  namespace: default
